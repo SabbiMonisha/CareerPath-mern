@@ -1,0 +1,248 @@
+/* Stream Carousel Styles */
+.stream-carousel {
+  position: relative;
+  padding: 2rem 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.carousel-container {
+  position: relative;
+  height: 400px;
+  perspective: 1000px;
+  margin-bottom: 3rem;
+}
+
+.carousel-card {
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.carousel-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 100%);
+  z-index: 1;
+}
+
+.carousel-card h3 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.carousel-card p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.career-list {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.15);
+  
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+.career-list h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+}
+
+.career-list ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.career-list li {
+  background: rgba(255,255,255,0.2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.explore-btn {
+  display: inline-block;
+  background: white;
+  color: var(--dark);
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  align-self: flex-start;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border: none;
+  cursor: pointer;
+}
+
+.explore-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.prev-btn, .next-btn {
+  background: #6C63FF;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: #564FD9;
+  transform: scale(1.1);
+}
+
+.dots {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e9ecef;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #6C63FF;
+  transform: scale(1.3);
+}
+
+/* 3D Carousel Effects */
+.carousel-card.left {
+  transform: translateX(-100%) scale(0.9) rotateY(10deg);
+  opacity: 0.7;
+  z-index: 1;
+  filter: brightness(0.8);
+}
+
+.carousel-card.center {
+  transform: translateX(-50%) scale(1) rotateY(0deg);
+  opacity: 1;
+  z-index: 2;
+  filter: brightness(1);
+}
+
+.carousel-card.right {
+  transform: translateX(0%) scale(0.9) rotateY(-10deg);
+  opacity: 0.7;
+  z-index: 1;
+  filter: brightness(0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 350px;
+  }
+  
+  .carousel-card {
+    width: 250px;
+    padding: 1.5rem;
+  }
+  
+  .carousel-card h3 {
+    font-size: 2.5rem;
+  }
+  
+  .carousel-controls {
+    gap: 1rem;
+  }
+  
+  .prev-btn, .next-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 300px;
+  }
+  
+  .carousel-card {
+    width: 220px;
+    padding: 1.2rem;
+  }
+  
+  .carousel-card h3 {
+    font-size: 2rem;
+  }
+  
+  .career-list li {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
+  .explore-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Animation for auto-rotate pause */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.dot.active {
+  animation: pulse 1.5s infinite;
+}

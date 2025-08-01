@@ -1,0 +1,79 @@
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.primary-btn, .secondary-btn, .outline-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #6C63FF;
+  color: white;
+  box-shadow: 0 4px 15px rgba(108, 99, 255, 0.3);
+}
+
+.primary-btn:hover {
+  background-color: #574ff3;
+}
+
+.secondary-btn {
+  background-color: #42E2B8;
+  color: white;
+  box-shadow: 0 4px 15px rgba(66, 226, 184, 0.3);
+}
+
+.secondary-btn:hover {
+  background-color: #2cc6a4;
+}
+
+.outline-btn {
+  border: 2px solid #6C63FF;
+  color: #6C63FF;
+  background-color: transparent;
+}
+
+.outline-btn:hover {
+  background-color: #6C63FF;
+  color: white;
+}
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.primary-btn, .secondary-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #6C63FF;
+  color: white;
+}
+
+.secondary-btn {
+  background-color: #42E2B8;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #5145cd;
+}
+
+.secondary-btn:hover {
+  background-color: #2cbf9f;
+}

@@ -1,0 +1,125 @@
+/* Professional Banner Styles */
+.professional-banner {
+  /* Sophisticated gradient */
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  background-size: 200% 200%;
+  animation: subtle-gradient 15s ease infinite;
+  
+  /* Clean, modern border radius */
+  border-radius: 12px;
+  
+  /* Professional shadow */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  
+  /* Minimal border */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  /* Typography */
+  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 2rem 3rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  
+  /* Smooth transitions */
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  
+  /* Subtle 3D effect */
+  transform: perspective(1000px);
+  
+  /* Glass morphism effect */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  
+  /* Content layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effects */
+.professional-banner:hover {
+  transform: perspective(1000px) translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Decorative elements (kept subtle) */
+.professional-banner::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: rotate-bg 20s linear infinite;
+  z-index: 0;
+}
+
+/* Content wrapper */
+.professional-banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Underline animation */
+.professional-banner h2 {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.professional-banner h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.6s ease;
+}
+
+.professional-banner:hover h2::after {
+  width: 100%;
+}
+
+/* Subtle badge */
+.professional-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  backdrop-filter: blur(5px);
+}
+
+/* Animations */
+@keyframes subtle-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes rotate-bg {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .professional-banner {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+}

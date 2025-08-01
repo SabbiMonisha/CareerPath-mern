@@ -1,0 +1,373 @@
+/* Base Styles */
+:root {
+  --sidebar-width: 280px;
+  --header-height: 80px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+.streams-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* Navigation Styles */
+.streams-nav {
+  width: var(--sidebar-width);
+  background: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  padding: 30px 20px;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #4361ee, #3a0ca3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.search-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.search-wrapper input {
+  width: 100%;
+  padding: 12px 15px 12px 40px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+
+.search-wrapper input:focus {
+  outline: none;
+  border-color: #4361ee;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+
+.nav-menu {
+  list-style: none;
+}
+
+.nav-menu li {
+  padding: 12px 15px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.nav-menu li:hover {
+  background-color: #f1f5f9;
+}
+
+.nav-menu li.active {
+  background-color: #e0e7ff;
+  color: #3b82f6;
+}
+
+.stream-icon {
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+/* Main Content Styles */
+.streams-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding: 40px;
+}
+
+/* Stream Grid View */
+.streams-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #1e293b;
+}
+
+.grid-subtitle {
+  color: #64748b;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.stream-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-top: 4px solid var(--stream-color);
+}
+
+.stream-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.card-header .stream-icon {
+  font-size: 1.8rem;
+  margin-right: 15px;
+  color: var(--stream-color);
+}
+
+.card-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.full-form {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+.card-description {
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+.explore-btn {
+  background: var(--stream-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.explore-btn:hover {
+  opacity: 0.9;
+  transform: translateX(5px);
+}
+
+/* Stream Detail View */
+.stream-detail {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stream-detail header {
+  color: white;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stream-header-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.stream-header-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.stream-icon-large {
+  font-size: 3rem;
+  opacity: 0.2;
+}
+
+.detail-content {
+  padding: 30px;
+}
+
+.overview {
+  margin-bottom: 30px;
+}
+
+.overview h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.overview p {
+  color: #475569;
+  line-height: 1.7;
+}
+
+.detail-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.detail-card {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 20px;
+  border-left: 3px solid #e2e8f0;
+}
+
+.detail-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.exam-badge {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #3b82f6;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.career-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.career-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.college-list {
+  display: grid;
+  gap: 12px;
+}
+
+.college-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.rank-badge {
+  width: 24px;
+  height: 24px;
+  background: #e0e7ff;
+  color: #3b82f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .streams-nav {
+    width: 240px;
+    padding: 20px 15px;
+  }
+  
+  .streams-content {
+    margin-left: 240px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .streams-dashboard {
+    flex-direction: column;
+  }
+  
+  .streams-nav {
+    width: 100%;
+    height: auto;
+    position: static;
+    padding: 20px;
+  }
+  
+  .streams-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .stream-detail header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .stream-icon-large {
+    order: -1;
+  }
+}

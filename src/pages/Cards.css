@@ -1,0 +1,155 @@
+/* GovtJobs Page Container */
+.page-container.govt-jobs {
+  padding: 3rem 2rem;
+  background: linear-gradient(to bottom right, #f0f4f8, #e2e8f0);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  min-height: 100vh;
+}
+
+/* Page Title */
+.page-container.govt-jobs h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #1e3a8a;
+  border-bottom: 5px solid #3b82f6;
+  display: inline-block;
+  padding-bottom: 0.6rem;
+}
+
+/* Grid for Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+/* Card Style */
+.page-container.govt-jobs .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.8rem;
+  border-left: 6px solid #2563eb;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.page-container.govt-jobs .card:hover {
+  transform: scale(1.015) translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Heading */
+.page-container.govt-jobs .card h2 {
+  font-size: 1.6rem;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.4rem;
+}
+
+/* Card Content */
+.page-container.govt-jobs .card p {
+  font-size: 0.95rem;
+  color: #334155;
+  margin: 0.4rem 0;
+  line-height: 1.5;
+}
+
+/* Section Label */
+.page-container.govt-jobs .card p strong {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #1e293b;
+}
+
+/* Link Style */
+.page-container.govt-jobs .card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #2563eb;
+  background: #eef2ff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.page-container.govt-jobs .card a:hover {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+/* Unique Border Colors */
+.card-0 { border-left-color: #0077b6; }
+.card-1 { border-left-color: #ef476f; }
+.card-2 { border-left-color: #06d6a0; }
+.card-3 { border-left-color: #118ab2; }
+.card-4 { border-left-color: #f9844a; }
+.card-5 { border-left-color: #8338ec; }
+.card-6 { border-left-color: #fb5607; }
+.card-7 { border-left-color: #3a86ff; }
+.card-8 { border-left-color: #2a9d8f; }
+.card-9 { border-left-color: #ff006e; }
+.card-10 { border-left-color: #6a4c93; }
+.card-11 { border-left-color: #ffb703; }
+
+/* GOVT JOB Badge (Only in GovtJobs Page) */
+.page-container.govt-jobs .card::before {
+  content: 'Govt Job';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 4px 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Optional Custom Badge (Replace ::before if needed) */
+.card .badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 4px 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-container.govt-jobs h1 {
+    font-size: 2.2rem;
+  }
+
+  .page-container.govt-jobs .card h2 {
+    font-size: 1.3rem;
+  }
+
+  .page-container.govt-jobs .card p {
+    font-size: 0.9rem;
+  }
+
+  .page-container.govt-jobs .card a {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+}
